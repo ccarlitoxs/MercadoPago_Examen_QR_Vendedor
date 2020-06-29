@@ -268,10 +268,10 @@ $(document).ready(function() {
 // Estas funciones muestran los selectores de país, región, comuna, barrio, ciudad
 ///////////////////////////////////////////////////////////////////////////
 	function fillCountrySelector(){
-
+		console.log('consultando paises');
 		$.get("https://api.mercadolibre.com/countries",function(countries){
 			$('#country').html("<option>Selecciona el país...</option>");
-
+			
 			for(country in countries){
 				$('#country').append("<option value='"+countries[country].id+"'>"+countries[country].name+"</option>");
 			}
