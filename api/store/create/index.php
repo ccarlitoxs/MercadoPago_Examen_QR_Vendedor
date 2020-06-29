@@ -17,6 +17,6 @@ $url="";
 $json = $_POST["json"];
 
 
-curl_call("put","https://api.mercadopago.com/users/$collector_id/store?access_token=$access_token",$json);
+curl_call("post","https://api.mercadopago.com/users/$collector_id/store?access_token=$access_token",$json);
 
 ?>

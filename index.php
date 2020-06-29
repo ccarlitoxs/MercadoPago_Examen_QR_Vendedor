@@ -1,8 +1,10 @@
-<!--
+<!--37593104-->
+<?php
+echo "<pre>";
+ var_dump($_SERVER['HTTP_HOST']);
+echo "</pre>";
 
-IMPORTANTE: Ingresa aquí, sustituyendo este texto, tu DNI/RUT o identificador de tu carnet sin puntos, guiones ni espacios. Sí pueden ir números y letras juntos.
-
--->
+?>
 <html>
 	<head>
 		<title>POINT OF SALE | ACME (Exam)</title>

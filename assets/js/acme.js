@@ -325,7 +325,27 @@ $(document).ready(function() {
 		// REVISA AQUÍ:
 		// Modifica el storeJSON con la estructura necesaria para crear una Store correctamente.
 
-		var storeJSON = {}
+		var storeJSON = {
+		
+			"external_id": externalStoreID,
+			"name": storeName,
+			"location": {
+			"city_name": city,
+			"latitude": latitude,
+			"longitude": longitude,
+			"reference": addressReference,
+			"state_name": state,
+			"street_name": streetName,
+			"street_number": streetNumber
+			},
+			"business_hours": {
+			"monday": [{"open": "08:00","close": "13:00"},{"open": "15:00","close": "18:00"}],"tuesday": [{"open": "08:00","close":
+			"18:00"}],"wednesday": [{"open": "08:00","close": "18:00"}],"thursday": [{"open": "08:00","close": "18:00"}],"friday":
+			[{"open": "08:00","close": "18:00"}],"saturday": [{"open": "08:00","close": "13:00"}],"sunday": [{"open": "08:00","close":
+			"13:00"}]
+			}
+				
+		}
 
 		console.log(storeJSON);
 		$.post("api/store/create/",{json:JSON.stringify(storeJSON)},function(results){
@@ -347,7 +367,7 @@ $(document).ready(function() {
 
 		// REVISA AQUÍ:
 
-		var category = 1;   // Agrega aquí el número de categoría o MCC necesario para 
+		var category = 621102;   // Agrega aquí el número de categoría o MCC necesario para 
 							// Identificar al POS de restaurante
 
 
@@ -356,7 +376,7 @@ $(document).ready(function() {
 
 		var posJSON ={"name":posName,
 					"external_store_id":externalStoreID,
-					"fixed_amount":false,
+					"fixed_amount":true,
 					"category_id":category,
 					"external_id":externalPOSID};
 
@@ -384,7 +404,7 @@ var items = [{
 		    "title" : "Caffè Americano",
 		    "picture_url":"https://globalassets.starbucks.com/assets/f12bc8af498d45ed92c5d6f1dac64062.jpg?impolicy=1by1_wide_1242",
 		    "description" : "Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance. Pro Tip: For an additional boost, ask your barista to try this with an extra shot.",
-		    "unit_price" : 90,
+		    "unit_price" : 180,
 		    "quantity" : 1
 		  },
 		  {
