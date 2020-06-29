@@ -1,7 +1,7 @@
 <!--37593104-->
 <?php
 echo "<pre>";
- var_dump($_SERVER['HTTP_HOST']);
+ var_dump($_SERVER);
 echo "</pre>";
 
 ?>
