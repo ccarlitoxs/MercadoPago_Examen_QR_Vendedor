@@ -1,10 +1,4 @@
 <!--37593104-->
-<?php
-// echo "<pre>";
-//  var_dump($_SERVER);
-// echo "</pre>";
-
-?>
 <html>
 	<head>
 		<title>POINT OF SALE | ACME (Exam)</title>
