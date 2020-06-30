@@ -10,14 +10,14 @@ global $access_token,$collector_id,$notificationJSON;
 // Para ver el estado del pago.
 
 $lastResource = file_get_contents('../notifications.txt');
-
-$url= "https://api.mercadopago.com/merchant_orders/$lastResource?access_token=$access_token";
+return $lastResource;
+// $url= "https://api.mercadopago.com/merchant_orders/$lastResource?access_token=$access_token";
 
 // REVISAR AQUÍ:
 // Agrega la $url necesaria para revisar el estado del pago en base al recurso recibido de la notificación
 
 // Sustituye el método por su correspondiente: get, put, post, delete
 
-curl_call("get","$url","");
+// curl_call("get","$url","");
 
  ?>
