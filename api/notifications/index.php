@@ -14,6 +14,10 @@ global $access_token,$collector_id,$notificationJSON;
 
 $rootPath = $_SERVER['DOCUMENT_ROOT'];
 
+// Recibe notificación:
+	$fp = fopen('notif.txt', 'w');
+	fwrite($fp, file_get_contents('php://input'));
+	fclose($fp);
 
 // Recibe notificación:
 $received_json = str_replace(",}","}",file_get_contents('php://input'));
@@ -25,6 +29,8 @@ $n=0;
 
 if(isset($notification['resource'])){$resource = $notification['resource'];$n=$n+1;}else{$resource= "";}
 if(isset($notification['topic'])){$topic =$notification['topic'];$n=$n+1;}else{$topic ="";}
+
+$resource = str_replace('https://ccarlitoxs-mercadopago-qr-vend.herokuapp.com/api/notifications',"",$resource);
 
 
 
