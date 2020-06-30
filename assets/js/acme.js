@@ -75,7 +75,7 @@ $(document).ready(function() {
 					// para recibir las notificaciones en tu endpoint público.
 
 					var orderJSON ={"external_reference": external_reference,
-									"notification_url": "",
+									"notification_url": "https://ccarlitoxs-mercadopago-qr-vend.herokuapp.com/notifications",
 									"items" : items
 									};
 
@@ -377,7 +377,7 @@ $(document).ready(function() {
 		var posJSON ={"name":posName,
 					"external_store_id":externalStoreID,
 					"fixed_amount":true,
-					"category_id":category,
+					"category":category,
 					"external_id":externalPOSID};
 
 
@@ -404,8 +404,8 @@ var items = [{
 		    "title" : "Caffè Americano",
 		    "picture_url":"https://globalassets.starbucks.com/assets/f12bc8af498d45ed92c5d6f1dac64062.jpg?impolicy=1by1_wide_1242",
 		    "description" : "Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance. Pro Tip: For an additional boost, ask your barista to try this with an extra shot.",
-		    "unit_price" : 180,
-		    "quantity" : 1
+		    "unit_price" : 90,
+		    "quantity" : 2
 		  },
 		  {
 		  	"id":"sku011",
